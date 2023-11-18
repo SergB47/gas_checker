@@ -37,9 +37,10 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
-    env:
         
-        ALCH_KEY: ${{ secrets.ALCH_KEY }}
+      - name: Hello world action
+        env: # Or as an environment variable
+          ALCH_KEY: ${{ secrets.ALCH_KAY }}
 
   # Deployment job
   deploy:
